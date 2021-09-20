@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Alice -> FrontService: http: register (POST /employees)
+FrontService --> FrontService: simple validation
+FrontService --> EmployeeService: kafka: register data
+EmployeeService --> EmployeeService: validate data  \n+ check if personal email in use
+
+EmployeeService --> EmployeeService: generate user id and password
+EmployeeService --> DB: sql: insert data to db
+EmployeeService --> EmailService: send email
+...
+
+Alice -> FrontService: http: view profile (GET /employees/{userId})
+FrontService -> EmployeeService++: http: view profile (GET /employees/{userId})
+EmployeeService -> DB++: sql: select employee data
+return profile data
+return profile data
+
+...
+Alice -> FrontService: http: change password (PUT /employees/{userId}/password)
+FrontService -> EmployeeService++: http: change password (PUT /employees/{userId}/password)
+EmployeeService -> DB++: sql: update password
+return http: ok
+return http: ok
+
+@enduml

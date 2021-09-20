@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/employee-service/employee-service.iml" filepath="$PROJECT_DIR$/employee-service/employee-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/employee-service-api/employee-service-api.iml" filepath="$PROJECT_DIR$/employee-service-api/employee-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/front-service/front-service.iml" filepath="$PROJECT_DIR$/front-service/front-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/front-service-api/front-service-api.iml" filepath="$PROJECT_DIR$/front-service-api/front-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bom/hcl-bom.iml" filepath="$PROJECT_DIR$/bom/hcl-bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/hcl-common.iml" filepath="$PROJECT_DIR$/common/hcl-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hcl-parent.iml" filepath="$PROJECT_DIR$/hcl-parent.iml" />
+    </modules>
+  </component>
+</project>

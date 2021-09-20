@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hcl-common" />
+        <module name="employee-service-api" />
+        <module name="front-service" />
+        <module name="front-service-api" />
+        <module name="employee-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="employee-service" target="11" />
+      <module name="employee-service-api" target="11" />
+      <module name="front-service" target="11" />
+      <module name="front-service-api" target="11" />
+      <module name="hcl-bom" target="11" />
+      <module name="hcl-common" target="11" />
+      <module name="hcl-parent" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="employee-service" options="-parameters" />
+      <module name="employee-service-api" options="-parameters" />
+      <module name="front-service" options="-parameters" />
+      <module name="front-service-api" options="-parameters" />
+      <module name="hcl-common" options="-parameters" />
+    </option>
+  </component>
+</project>
