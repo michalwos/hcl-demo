@@ -1,17 +1,21 @@
 server:
-  port: 8081
+  port: 8080
 
 spring:
   application:
     name: employee-service
   datasource:
     driver-class-name: org.h2.Driver
-    url: dbc:h2:mem:employee
+    url: jdbc:h2:file:/tmp/employee
     username: root
     password: password
   liquibase:
     change-log: classpath:/db/changelog/db.changelog-master.xml
-
+  h2:
+    console:
+      enabled: true
+  jpa:
+    generate-ddl: true
 management:
   endpoints:
     web:

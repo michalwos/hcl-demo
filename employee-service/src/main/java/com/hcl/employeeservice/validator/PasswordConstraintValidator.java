@@ -1,6 +1,7 @@
 package com.hcl.employeeservice.validator;
 
 import com.google.common.base.Joiner;
+import com.google.common.base.Strings;
 import org.passay.*;
 
 import javax.validation.ConstraintValidator;
@@ -19,6 +20,8 @@ public class PasswordConstraintValidator implements ConstraintValidator<ValidPas
     @Override
     public boolean isValid(String password, ConstraintValidatorContext context) {
 
+        String validatedPassword = Strings.nullToEmpty(password);
+
         PasswordValidator validator = new PasswordValidator(Arrays.asList(
                 new LengthRule(8, Integer.MAX_VALUE),
                 new CharacterRule(EnglishCharacterData.UpperCase, 1),
@@ -26,7 +29,7 @@ public class PasswordConstraintValidator implements ConstraintValidator<ValidPas
                 new CharacterRule(EnglishCharacterData.Special, 1),
                 new WhitespaceRule()));
 
-        RuleResult result = validator.validate(new PasswordData(password));
+        RuleResult result = validator.validate(new PasswordData(validatedPassword));
         if (result.isValid()) {
             return true;
         }
