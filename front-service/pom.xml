@@ -7,7 +7,7 @@
         <groupId>com.hcl</groupId>
         <artifactId>hcl-bom</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath>../bom/pom.xml</relativePath>
     </parent>
 
     <artifactId>front-service</artifactId>

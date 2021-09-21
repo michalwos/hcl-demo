@@ -7,18 +7,13 @@
         <groupId>com.hcl</groupId>
         <artifactId>hcl-bom</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath>../bom/pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>employee-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
-        <dependency>
-            <groupId>com.hcl</groupId>
-            <artifactId>hcl-base-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>com.hcl</groupId>
             <artifactId>hcl-common</artifactId>
